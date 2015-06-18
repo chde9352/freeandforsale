@@ -1,0 +1,1645 @@
+/*=======================================================================================
+
+Template Name: ROOM - Responsive Bootstrap Creative Template
+Version: 1.0
+Author: ronseta
+Email: rsetiyawan5@gmail.com
+Website: http://ronseta.com
+
+----------------------------------------------------------------
+
+[Table of contents]
+
+1. Reset css
+2. Loading / preloading
+3. Logo 
+4. Navigation
+5.  ~ 01_Banner
+    ~ 02_Banner
+6. Quote / slider 
+7. Misson 
+8. About 
+9. Feature 
+10. Slide portfolio 
+11. Testimoni / slider 
+12. Brand
+13. Contact
+14. Footer
+15. Team
+16. Proccess / video
+17. Skill
+18. Portfolio
+19. Portfolio post [single]
+20. Blog [single]
+    ~ Single
+    ~ Comment
+21. Contact form [single]
+22. Media Qwery
+
+========================================================================================*/
+
+
+/*--------------- RESET ------------------*/
+html,body,div,span,ifreme,object,
+h1,h2,h3,h4,h5,h6,p,blockquot,pre,
+a,abbr,addres,big,cite,code,
+del,em,img,ins,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,lable,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,embed,
+figure,figcaption,footer,header,hgroup,
+menu,nav,output,ruby,section,summary,
+time,mark,audio,video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+
+input{
+	margin:0;
+	padding:0;
+}
+
+ul,li,ol{
+	list-style-type:none;
+}
+input, textarea{
+	outline:none;
+}
+/*--------------- END RESET ------------------*/
+
+
+/*GENERAL*/
+@font2: roboto;
+@font: open sans, arial, sans serif;
+@font3: droid serif;
+
+@head: #535353;
+@txt: #8a8a8a;
+
+@soft: #f7f7f7;
+
+a{
+    transition: all 0.3s ease-in-out;
+    moz-transition: all 0.3s ease-in-out;
+    webkit-transition: all 0.3s ease-in-out;
+    o-transition: all 0.3s ease-in-out;
+}
+
+/*=========================================================================
+LOADING
+===========================================================================*/
+.loading{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+    background: url(../images/loading.gif) center center no-repeat;
+    background-color: #fff;
+}
+
+
+/*=========================================================================
+LOGO
+===========================================================================*/
+.logo{
+    position: absolute;
+    padding: 40px;
+}
+
+/*=========================================================================
+NAVIGATION
+===========================================================================*/
+.nav-menu{
+    right: 0;
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    padding: 50px;
+    z-index: 999;
+    overflow-y: auto;
+    opacity: 0;
+    
+    transition: all 0.3s ease-in-out;
+    moz-transition: all 0.3s ease-in-out;
+    webkit-transition: all 0.3s ease-in-out;
+    o-transition: all 0.3s ease-in-out;
+    
+    transform: translateX(100%);
+    moz-transform: translateX(100%);
+    webkit-transform: translateX(100%);
+    o-transform: translateX(100%);    
+    
+    .logo-nav{
+        text-align: center;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+    
+    .nav-container{
+        
+        li{
+            padding: 15px 0;
+            
+            a{
+                color: white;
+                font-family: @font2;
+                text-decoration: none;
+                font-weight: lighter;
+                text-transform: uppercase;
+                font-size: 9pt;
+                
+                &:hover{
+                    opacity: .4;
+                }
+            }
+            
+            span{
+                float: right;
+                margin-top: 8px;
+            }
+            
+            ul{
+                padding: 0 20px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.nav-toggle{
+    position: fixed;
+    right: 0;
+    z-index: 9999;
+    margin: 10px 20px;
+    text-align: center;
+    width: 50px;
+    height: 40px;        
+    
+    a{
+        font-size: 14pt;
+        line-height: 40px;
+        color: white;
+        
+        &:hover{
+            opacity: .5;
+        }
+    }
+}
+
+.active-nav {
+    transition: all 0.5s ease-in-out;   
+    moz-transition: all 0.5s ease-in-out;
+    webkit-transition: all 0.5s ease-in-out;
+    o-transition: all 0.5s ease-in-out;    
+}
+
+.passive-nav{
+    margin-top: 30px;
+    background: none;
+    transition: all 0.5s ease-in-out;   
+    moz-transition: all 0.5s ease-in-out;
+    webkit-transition: all 0.5s ease-in-out;
+    o-transition: all 0.5s ease-in-out;        
+    
+}
+
+.nav-slide{
+    opacity: 1;
+    transform: translateX(0%);
+    moz-transform: translateX(0%);
+    webkit-transform: translateX(0%);
+    o-transform: translateX(0%);
+}
+
+/*=========================================================================
+01_BANNER
+===========================================================================*/
+.banner-lg{
+    background-image: url(../images/01_banner.png);
+    background-size: cover;
+    height: 700px;
+    
+    .banner-content{
+        height: 100%;
+        text-align: center;
+        
+        .line{
+            margin: auto;
+            width: 1px;
+            height: 100px;
+            background: white;
+        }
+        
+        .banner-title{
+            padding-top: 100px;
+            text-align: left;
+            position: relative;
+            color: white;
+            font-family: @font2;
+            max-width: 320px;
+            margin: auto;
+            
+            h1{
+                font-size: 40pt;
+                font-weight: bold;
+                line-height: 45px;
+            }
+        }
+        
+        .banner-txt{
+            margin-top: 30px;
+            margin-bottom: 100px;
+            text-align: center;
+            color: white;
+            font-family: @font3;
+            font-style: italic;
+        }
+        
+        .banner-btn{
+            color: white;
+            font-family: @font2;
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 3px;
+            margin: auto;
+            
+            &:hover{
+                text-decoration: none;
+                background: white;
+            }
+        }
+    }
+}
+
+/*=========================================================================
+02_BANNER
+===========================================================================*/
+.banner-md{
+    background:top fixed;
+    background-size: cover;
+    background-image:url(../images/02_banner.png);
+    height: 400px;
+    
+    .banner-content{
+        height: 100%;
+        
+        .line{
+            margin: auto;
+            width: 1px;
+            height: 100px;
+            background: white;
+        }
+        
+        .banner-title{
+            padding-top: 100px;
+            position: relative;
+            color: white;
+            font-family: @font2;
+            text-align: center;
+            margin: auto;
+            
+            h1{
+                font-size: 40pt;
+                font-weight: bold;
+                line-height: 45px;
+            }
+        }
+    }
+}
+
+
+
+
+/*=========================================================================
+QUOTE
+===========================================================================*/
+.quote{
+    padding-bottom: 2em;
+    
+    .line{
+        height: 100px;
+        width: 1px;
+        margin: auto;
+    }
+    
+    .quote-content{
+        text-align: center;
+        
+        h3{
+            font-size: 18pt;
+            font-family: @font3;
+            font-style: italic;
+            color: @head;
+            max-width: 800px;
+            margin: auto;
+            line-height: 34px;
+            margin-top: 20px;
+        }
+        
+        p{
+            font-family: @font2;
+            color: @txt;
+            font-size: 10pt;
+            margin-top: 20px;
+        }
+    }
+}
+
+.owl-theme{
+    .owl-controls{
+        .owl-page{
+            span{
+                border-radius: 0;
+                height: 3px;
+                width: 30px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+/*=========================================================================
+MISSION
+===========================================================================*/
+.mission{
+    padding: 5em 0;
+    
+    .line{
+        width: 80px;
+        height: 3px;
+        margin-top: 30px;
+    }
+    
+    h1{
+        font-family: @font2;
+        font-weight: bold;
+        color: @head;
+        font-size: 18pt;
+        margin: 10px 0;
+    }
+    
+    p{
+        font-family: @font;
+        font-weight: lighter;
+        color: @txt;
+        font-size: 11pt;
+        line-height: 24px;
+    }
+}
+
+
+
+
+
+/*=========================================================================
+ABOUT
+===========================================================================*/
+.about{
+    background: @soft;
+    padding: 5em 0;
+    
+    .container{
+    }
+    
+    .item{
+        
+        .ico-ico{
+            text-align: center;
+            font-size: 180pt;
+            text-align: right;
+            padding: 0 50px;
+        }
+        
+        h1{
+            color: @head;
+            font-family: @font2;
+            font-size: 30pt;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        p{
+            font-size: 11pt;
+            color: @txt;
+            max-width: 540px;
+            line-height: 24px;
+            font-family: @font;
+            font-weight: lighter;
+            margin: 20px 0;
+        }
+    }
+}
+
+
+
+
+/*=========================================================================
+FEATURE
+===========================================================================*/
+.feature{
+    background: @soft;
+    padding: 3em 0;
+    
+    span{
+        font-size: 36pt;
+        margin-bottom: 10px;
+    }
+    
+    h2{
+        font-family: @font2;
+        font-weight: bold;
+        color: @head;
+        font-size: 16pt;
+    }
+    
+    p{
+        font-family: @font;
+        font-weight: lighter;
+        line-height: 24px;
+        font-size: 11pt;
+        color: @txt;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+/*=========================================================================
+SLIDE PORTFOLIO
+===========================================================================*/
+.slide-folio{
+    background: center 600px;
+    background-size: cover;
+    background-image:url(../images/portfolio-cover.png);
+    
+    .container-folio{
+        padding: 5em 0;
+        background: rgba(34,42,43,0.9);
+        
+        h1{
+            text-align: center;
+            font-family: @font2;
+            color: white;
+            font-size: 18pt;
+            font-weight: bold;
+        }
+        
+        p{
+            font-size: 11pt;
+            text-align: center;
+            max-width: 600px;
+            color: #c9c9c9;
+            font-family: @font;
+            font-weight: lighter;
+            line-height: 24px;
+            margin: 20px auto;
+        }
+        
+        .item{
+            margin-top: 3em;
+        }
+    }
+    
+    .folio-btn{
+        text-align: center;
+        margin-top: 5em;
+        
+        a{
+            padding: 20px;
+            color: white;
+            font-family: @font2;
+            border: 1px solid white;
+            border-radius: 3px;
+            text-decoration: none;
+            
+            &:hover{
+                background: white;
+                color: #222a2b;
+            }
+        }
+    }
+}
+
+
+
+/*=========================================================================
+TESTIMONI
+===========================================================================*/
+.testimoni{
+    padding: 5em 0;
+    background: @soft;
+    
+    .item{
+        margin: 0 10px;
+        
+        .testimoni-article{
+            padding: 20px;
+            background: white;
+            border-radius: 3px;
+            font-family: @font3;
+            line-height: 26px;
+            font-style: italic;
+            color: @head;
+            font-size: 14pt;
+            max-width: 550px;
+        }
+        
+        .client{
+            font-family: @font2;
+            font-size: 10pt;
+            padding: 10px;
+            color: @txt;
+        }
+        
+        .avatar{
+            img{
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+}
+
+
+
+
+
+/*=========================================================================
+BRAND
+===========================================================================*/
+.brand{
+    padding: 3em 0;
+    
+    img{
+        margin: auto;
+        padding: 1em 0;
+    }
+}
+
+
+
+
+
+/*=========================================================================
+CONTACT
+===========================================================================*/
+.contact{
+    background-size: cover;
+    background-image:url(../images/contact-cover.png);
+    
+    .contact-bg{
+        padding: 5em 0;
+        text-align: center;
+        
+        .contact-btn{
+            color: white;
+            font-family: @font2;
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 3px;
+            
+            &:hover{
+                text-decoration: none;
+                background: white;
+            }
+        }
+        
+        p{
+            color: white;
+            font-family: @font;
+            font-weight: lighter;
+            font-size: 12pt;
+            max-width: 700px;
+            margin: auto;
+            padding: 3em 10px 0 10px;
+        }
+    }
+}
+
+
+
+/*=========================================================================
+FOOTER
+===========================================================================*/
+footer{
+    background: #262626;
+    padding: 2em 0;
+    text-align: center;
+    
+    img{
+        margin-bottom: 10px;
+    }
+    
+    ul{
+        padding-top: 20px;
+        
+        li{
+            display: inline;
+            margin-top: 10px;
+            padding: 0 20px;
+            font-family: @font;
+            font-weight: lighter;
+            color: darken(#808080, 20%);
+            
+            a{
+                color: #808080;
+                font-family: @font;
+                font-weight: lighter;
+                
+                &:hover{
+                    text-decoration: none;
+                }
+                
+                span{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/*=========================================================================
+TEAM
+===========================================================================*/
+.team{
+    min-height: 400px;
+    background: darken(@soft,3%);
+    
+    .team-img-1{
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        background-image:url(../images/team/01.png);
+    }
+    
+    .team-img-2{
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        background-image:url(../images/team/02.png);
+    }
+    
+    .team-img-3{
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        background-image:url(../images/team/03.png);
+    }    
+    
+    .content-us{
+        padding: 3em;
+        
+        h2{
+            font-size: 21pt;
+            font-family: @font2;
+            color: @head;
+            font-weight: bold;
+        }
+        
+        p{
+            margin-top: 20px;
+            font-family: @font;
+            font-weight: lighter;
+            color: @txt;
+            font-size: 11pt;
+            line-height: 24px;
+        }
+        
+        .quotes{
+            margin-top: 30px;
+            font-family: @font3;
+            color: @txt;
+            font-size: 12pt;
+            line-height: 24px;
+            font-style: italic;
+        }
+        
+        ul{
+            margin-top: 30px;
+        }
+        
+        li{
+            display: inline;
+            padding: 5px;
+            
+            a{
+                color: @txt;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+
+
+/*=========================================================================
+PROCCESS
+===========================================================================*/
+.process{
+    min-height: 400px;
+    background: @soft;
+    
+    .process-container{
+        
+        .video-content{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        
+        iframe{
+            width: 100%;
+            height: 400px;
+        }
+        
+        .process-content{
+            padding: 3em;
+            
+            h2{
+                font-family: @font2;
+                font-size: 21pt;
+                font-weight: bold;
+                color: @head;
+                margin-top: 20px;
+            }
+            
+            p{
+                margin-top: 20px;
+                font-family: @font;
+                font-weight: lighter;
+                color: @txt;
+                font-size: 11pt;
+            }
+        }
+    }
+}
+
+
+
+/*=========================================================================
+SKILL
+===========================================================================*/
+.skill{
+    background: center fixed;
+    background-image:url(../images/skill-cover.png);
+    background-size: cover;
+    
+    .skill-cover{
+        background: rgba(34,42,43,0.9);
+        padding: 5em 0px;
+        
+        .container-content{
+            padding-top: 5em;
+            padding-bottom: 7em;
+            border-top: 1px solid  darken(@soft,50%);
+            border-bottom: 1px solid darken(@soft,50%);
+            text-align: center;
+            color: darken(@soft,20%);
+            
+            i{
+                font-size: 40pt;
+                margin: 40px auto;
+            }
+            
+            h2{
+                font-size: 18pt;
+                font-family: @font2;
+                font-weight: bold;
+            }
+            
+            p{
+                font-family: @font;
+                font-weight: lighter;
+                font-size: 11pt;
+                margin-top: 10px;
+                color: darken(@soft,40%);
+            }
+        }
+    }
+}
+
+
+
+
+/*=========================================================================
+PORTFOLIO
+===========================================================================*/
+.portfolio{
+    background: @soft;
+    
+    .container-portfolio{
+        margin-left: 0px;
+        margin-right: 0px;
+        
+        .post{
+            padding-left: 0px;
+            padding-right: 0px;
+            background: white;
+            
+            transition: all 0.5s ease-in-out;   
+            moz-transition: all 0.5s ease-in-out;
+            webkit-transition: all 0.5s ease-in-out;
+            o-transition: all 0.5s ease-in-out;
+            
+            &:hover{
+                .post-content h1, small{
+                    color: white;
+                }
+                
+                img{
+                    opacity: 0.3;
+                    
+                    transition: all 0.5s ease-in-out;   
+                    moz-transition: all 0.5s ease-in-out;
+                    webkit-transition: all 0.5s ease-in-out;
+                    o-transition: all 0.5s ease-in-out;
+                }
+            }
+            
+            img{
+                width: 100%;
+            }
+            
+            .post-content{
+                padding: 1em;
+                
+                small{
+                    transition: all 0.5s ease-in-out;   
+                    moz-transition: all 0.5s ease-in-out;
+                    webkit-transition: all 0.5s ease-in-out;
+                    o-transition: all 0.5s ease-in-out;                    
+                }
+                
+                h1{
+                    font-family: @font2;
+                    font-weight: bold;
+                    color: @txt;
+                    
+                    transition: all 0.5s ease-in-out;   
+                    moz-transition: all 0.5s ease-in-out;
+                    webkit-transition: all 0.5s ease-in-out;
+                    o-transition: all 0.5s ease-in-out;                    
+                }
+            }
+        }
+    }
+}
+
+
+
+/*=========================================================================
+PORTFOLIO POST
+===========================================================================*/
+.portfolio-post{
+    padding: 5em 0;
+    
+    .portfolio-post-article{
+        padding: 1em;
+        
+        .portfolio-sidebar{
+            padding-bottom: 2em;
+            
+            h1{
+                font-family: @font2;
+                color: @head;
+                font-weight: bold;
+                font-size: 21pt;
+            }
+            
+            h2{
+                font-family: @font2;
+                color: @head;
+                font-weight: bold;
+                font-size: 16pt;
+            }
+            
+            p{
+                font-family: @font;
+                font-weight: lighter;
+                font-size: 11pt;
+                color: @txt;
+                margin: 10px 0;
+                line-height: 24px;
+            }
+            
+            .portfolio-quote{
+                font-style: italic;
+                font-family: @font3;
+                font-size: 12pt;
+            }
+            
+            .portfolio-categories{
+                font-family: @font2;
+                font-size: 10pt;
+                padding: 5px 10px;
+                border-radius: 30px;
+                text-decoration: none;
+                border: 1px solid @txt;
+                color: @txt;
+                line-height: 38px;
+                margin: 0 2px;
+                
+                &:hover{
+                    background: @txt;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+/*==========================================================================*/
+/*=========================================================================
+BLOG
+===========================================================================*/
+/*===========================================================================*/
+.blog{
+    padding: 5em 0;
+    
+    .blog-post{
+        padding: 1em 0;
+        
+        .blog-post-article{
+            padding: 1em 0;
+            
+            .feature-img{
+                max-height: 250px;
+                overflow: hidden;
+                border-radius: 3px;
+                margin-bottom: 21px;
+                
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            
+            .post-article-content{
+                            
+                a{
+                    text-decoration: none;
+                }
+                
+                h1{
+                    font-family: @font2;
+                    font-size: 24pt;
+                    font-weight: bold;
+                    color: @head;
+                    margin: 10px 0;
+                }
+                
+                p{
+                    font-family: @font;
+                    text-align: justify;
+                    font-size: 11pt;
+                    font-weight: lighter;
+                    color: @txt;
+                    line-height: 24px;
+                    margin: 10px 0;
+                }
+                
+                .author{
+                    text-align: center;
+                    
+                    img{
+                        max-width: 60px;
+                    }
+                    
+                    p{
+                        color: @txt;
+                        text-align: center;
+                        margin: 0;
+                        font-family: @font3;
+                        font-size: 10pt;
+                        font-style: italic;
+                    }
+                    
+                    .date{
+                        font-style: normal;
+                        font-family: @font2;
+                    }
+                }
+                
+                .comment-link{
+                    font-style: italic;
+                    font-size: 10pt;
+                }
+            }
+        }
+    }
+    
+    
+    .blog-sidebar{
+        .blog-sidebar-widget{
+            padding: 1em;
+            
+            h2{
+                font-weight: bold;
+                color: @txt;
+                font-family: @font2;
+                font-size: 16pt;
+            }
+            
+            .social-widget{
+                span{
+                    text-align: center;
+                    color: @txt;
+                    margin-bottom: 40px;
+                    font-size: 16pt;
+                    
+                    &:hover{
+                        color: lighten(@txt,20%);
+                    }
+                }
+            }
+            
+            .latest-post{
+                
+                .little-img{
+                    width: 40px;
+                    height: 40px;
+                    overflow: hidden;
+                    border-radius: 3px;
+                    margin: auto;
+                    
+                    img{
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+                
+                h3{
+                    font-size: 10pt;
+                    font-family: @font2;
+                    font-weight: bold;
+                    color: @head;
+                }
+                a:hover{
+                    text-decoration: none;
+                }
+                p{
+                    font-size: 8pt;
+                    font-family: @font;
+                    color: @txt;
+                    margin-top: 3px;
+                }
+                .date{
+                    font-family: @font3;
+                    font-style: italic;
+                }
+            }
+            
+            
+            .blog-sidebar-categories{
+                li{
+                    border-bottom: 1px solid lighten(@txt,40%);
+                    padding: 20px 0;
+                    
+                    a{
+                        font-family: @font2;
+                        color: @txt;
+                        font-size: 14px;
+                        text-decoration: none;
+                    }
+                    span{
+                        font-size: 9pt;
+                        font-family: @font;
+                        color: white;
+                        background: @txt;
+                        padding: 5px 10px;
+                        border-radius: 3px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            
+            .blog-categories{
+                font-family: @font2;
+                font-size: 10pt;
+                padding: 5px 10px;
+                border-radius: 30px;
+                text-decoration: none;
+                border: 1px solid @txt;
+                color: @txt;
+                line-height: 38px;
+                margin: 0 2px;
+                
+                &:hover{
+                    background: @txt;
+                    color: white;
+                }
+            }            
+        }
+    }
+    
+    .blog-pagination{
+        padding-bottom: 5em;
+        
+        p{
+            text-align: center;
+            
+            a{
+                margin: 0 5px;
+                padding: 5px 20px;
+                font-family: @font2;
+                font-size: 11pt;
+                color: @txt;
+                border: 1px solid @txt;
+                border-radius: 3px;
+                text-decoration: none;
+                
+                &:hover{
+                    color: white;
+                    background: @txt;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*SINGLE*/
+.blog-single{
+    padding: 5em 0;
+    
+    .blog-post{
+        padding: 1em 0;
+        
+        .blog-post-article{
+            padding: 1em 0;
+            
+            .feature-img{
+                overflow: hidden;
+                border-radius: 3px;
+                margin-bottom: 21px;
+                
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            
+            .post-article-content{
+                
+                img{
+                    max-width: 100%;
+                }
+                            
+                a{
+                    text-decoration: none;
+                }
+                
+                h1{
+                    font-family: @font2;
+                    font-size: 24pt;
+                    font-weight: bold;
+                    color: @head;
+                    margin: 10px 0;
+                }
+                
+                p{
+                    font-family: @font;
+                    text-align: justify;
+                    font-weight: lighter;
+                    font-size: 11pt;
+                    color: @txt;
+                    font-weight: lighter;
+                    line-height: 24px;
+                    margin: 10px 0;
+                }
+                
+                blockquote{
+                    font-family: @font3;
+                    color: @txt;
+                    line-height: 24px;
+                    font-size: 11pt;
+                    font-style: italic;
+                    margin: 20px 0;
+                }
+                
+                .author{
+                    text-align: center;
+                    
+                    img{
+                        max-width: 60px;
+                    }
+                    
+                    p{
+                        color: @txt;
+                        text-align: center;
+                        margin: 0;
+                        font-family: @font3;
+                        font-size: 10pt;
+                        font-style: italic;
+                    }
+                    
+                    .date{
+                        font-style: normal;
+                        font-family: @font2;
+                    }
+                }
+                
+                .comment-link{
+                    font-style: italic;
+                    font-size: 10pt;
+                }
+            }
+        }
+    }
+    
+    
+    .blog-single-sidebar{
+        .blog-sidebar-widget{
+            padding: 1em;
+            
+            h2{
+                font-weight: bold;
+                color: @txt;
+                font-family: @font2;
+                font-size: 16pt;
+            }
+            
+            .social-widget{
+                span{
+                    text-align: center;
+                    color: @txt;
+                    margin-bottom: 40px;
+                    font-size: 16pt;
+                    
+                    &:hover{
+                        color: lighten(@txt,20%);
+                    }
+                }
+            }
+            
+            .latest-post{
+                
+                .little-img{
+                    width: 40px;
+                    height: 40px;
+                    overflow: hidden;
+                    border-radius: 3px;
+                    margin: auto;
+                    
+                    img{
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+                
+                h3{
+                    font-size: 10pt;
+                    font-family: @font2;
+                    font-weight: bold;
+                    color: @head;
+                }
+                a:hover{
+                    text-decoration: none;
+                }
+                p{
+                    font-size: 8pt;
+                    font-family: @font;
+                    color: @txt;
+                    margin-top: 3px;
+                }
+                .date{
+                    font-family: @font3;
+                    font-style: italic;
+                }
+            }
+            
+            
+            .blog-sidebar-categories{
+                li{
+                    border-bottom: 1px solid lighten(@txt,40%);
+                    padding: 20px 0;
+                    
+                    a{
+                        font-family: @font2;
+                        color: @txt;
+                        font-size: 14px;
+                        text-decoration: none;
+                    }
+                    span{
+                        font-size: 9pt;
+                        font-family: @font;
+                        color: white;
+                        background: @txt;
+                        padding: 5px 10px;
+                        border-radius: 3px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            
+            .blog-categories{
+                font-family: @font2;
+                font-size: 10pt;
+                padding: 5px 10px;
+                border-radius: 30px;
+                text-decoration: none;
+                border: 1px solid @txt;
+                color: @txt;
+                line-height: 38px;
+                margin: 0 2px;
+                
+                &:hover{
+                    background: @txt;
+                    color: white;
+                }
+            }            
+        }
+    }
+}
+
+/*COMMENTS*/
+.comment{
+    
+    h2{
+        font-family: @font2;
+        color: @head;
+        font-weight: bold;
+        font-size: 21pt;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .comment-container{
+        border-bottom: 1px solid @soft;
+        margin-bottom: 2em;
+        padding-bottom: 1em;
+        
+        .comment-avatar{
+            text-align: center;
+            
+            p{
+                color: @txt;
+                font-family: @font;
+                font-size: 8pt;
+                margin-bottom: 2px;
+            }
+            
+            img{
+                width: 40px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    
+    .comment-content{
+        h1{
+            font-family: @font2;
+            color: @head;
+            font-size: 11pt;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        p{
+            font-family: @font;
+            font-weight: lighter;
+            font-size: 10pt;
+            color: @txt;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+        .reply{
+            font-family: @font3;
+            font-size: 10pt;
+            font-style: italic;
+            color: @txt;
+            text-decoration: none;
+        }
+    }
+    
+    ul li ul{
+        margin-left: 3em;
+    }
+    
+    .comment-form{
+        h1{
+            font-family: @font2;
+            color: @head;
+            font-weight: bold;
+            font-size: 16pt;
+            margin-bottom: 5px;
+            margin-top: 2em;
+        }
+        
+    form{
+            input{
+                height: 40px;
+                border: none;
+                border-bottom: 1px solid lighten(@txt,30%);
+                margin-top: 20px;
+                background: none;
+                width: 100%;
+            }
+            .btn-form{
+                color: darken(@soft,30%);
+                font-family: @font2;
+                border-radius: 3px;
+                background: @soft;
+                margin-bottom: 3em;
+
+                &:hover{
+                    text-decoration: none;
+                    background: darken(@soft,40%);
+                }
+            }
+            textarea{
+                background: none;
+                width: 100%;
+                border: none;
+                margin-top: 20px;
+                border-bottom: 1px solid lighten(@txt,30%);
+            }
+        }
+    }
+}
+
+
+
+
+/*=========================================================================
+CONTACT FORM
+===========================================================================*/
+.contact-form{
+    padding: 5em 0;
+    background: lighten(@txt,40%);
+    .contact-form-info{
+        text-align: center;
+        padding: 6em 0;
+        background: white;
+        
+        h1{
+            font-family: @font2;
+            font-size: 21pt;
+            font-weight: bold;
+            color: @head;
+        }
+        .contact-line{
+            height: 2px;
+            width: 100px;
+            margin: 2em auto;
+        }
+        p{
+            font-family: @font3;
+            font-style: italic;
+            color: @txt;
+            line-height: 24px;
+            font-size: 11pt;
+        }
+    }
+    
+    form{
+        input{
+            height: 40px;
+            border: none;
+            border-bottom: 1px solid lighten(@txt,30%);
+            margin-top: 20px;
+            background: none;
+            width: 100%;
+        }
+        .contact-btn{
+            color: darken(@soft,30%);
+            font-family: @font2;
+            border-radius: 3px;
+            background: @soft;
+            
+            &:hover{
+                text-decoration: none;
+                background: white;
+            }
+        }
+        textarea{
+            background: none;
+            width: 100%;
+            border: none;
+            margin-top: 20px;
+            border-bottom: 1px solid lighten(@txt,30%);
+        }
+    }
+}
+
+.hide-msg{
+    transform: translateY(-100%);
+}
+
+.msg{
+    margin: 0 1em;;
+    position: fixed;
+    font-size: 10pt;
+    text-align: center;
+    max-width: 500px;
+    z-index: 99999;
+    background: @soft;
+    padding: 2em;
+    font-family: @font;
+    font-weight: lighter;
+    color: @txt;
+    
+    transition: all 0.3s ease-in-out;
+    o-transition: all 0.3s ease-in-out;
+    webkit-transition: all 0.3s ease-in-out;
+    moz-transition: all 0.3s ease-in-out;
+    
+    span{
+        padding-left: 1em;
+    }
+}
+
+
+
+
+/*=========================================================================
+MEDIA QWERY
+===========================================================================*/
+@media (max-width: 992px) {
+    
+    body{
+        text-align: center;
+    }
+    
+    .banner-lg .banner-content .banner-title h1{
+        font-size: 30pt;
+        text-align: center;
+    }
+    
+    .banner-md .banner-content .banner-title h1{
+        font-size: 30pt;
+    }
+    
+    .about .item .ico-ico{
+        text-align: center;
+    }
+    
+    .about .item p{
+        margin: 20px auto;
+    }
+    
+    .line{
+        margin: auto;
+    }
+    
+    footer .info li{
+        display: block;
+    }
+    
+    .blog .author img{
+        display: none;
+    }
+    
+    .blog .author {
+        text-align: left;
+    }
+    
+    .comment{
+        text-align: justify;
+    }
+    
+}
+
+#slider2 {
+  background:url("../img/iphone-bg.png")no-repeat;
+  display:block;
+  height:621px;
+  width:353px;
+  margin:80px auto 0; position:relative; 
+}
+
+#slider2 img {
+  width:247px;
+  height:433px;
+  position:absolute;
+  top:60px;
+  left:50px; 
+}
+
+
