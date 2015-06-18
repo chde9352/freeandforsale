@@ -138,6 +138,27 @@
       $(".msg").addClass("hide-msg");
     });
 
+
+    $('.FadeRight2').one('inview', function (event, visible) {
+      if (visible) {
+        $(this).addClass('animated fadeInRight');
+      } 
+    });
+	
+    $('.FadeLeft2').one('inview', function (event, visible) {
+      if (visible) {
+        $(this).addClass('animated fadeInLeft');
+      } 
+    });
+
+    $('#slider2').cycle({ 
+      fx:     'fade', 
+      speed:  'slow', 
+      timeout: 3000, 
+      next:   '#next2', 
+      prev:   '#prev2' 
+    });
+
   });
 
 })(jQuery);    
