@@ -1551,34 +1551,34 @@ CONTACT FORM
         }
     }
     
-    form{
-        input{
-            height: 40px;
-            border: none;
-            border-bottom: 1px solid lighten(@txt,30%);
-            margin-top: 20px;
-            background: none;
-            width: 100%;
-        }
-        .contact-btn{
-            color: darken(@soft,30%);
-            font-family: @font2;
-            border-radius: 3px;
-            background: @soft;
+    // form{
+    //     input{
+    //         height: 40px;
+    //         border: none;
+    //         border-bottom: 1px solid lighten(@txt,30%);
+    //         margin-top: 20px;
+    //         background: none;
+    //         width: 100%;
+    //     }
+    //     .contact-btn{
+    //         color: darken(@soft,30%);
+    //         font-family: @font2;
+    //         border-radius: 3px;
+    //         background: @soft;
             
-            &:hover{
-                text-decoration: none;
-                background: white;
-            }
-        }
-        textarea{
-            background: none;
-            width: 100%;
-            border: none;
-            margin-top: 20px;
-            border-bottom: 1px solid lighten(@txt,30%);
-        }
-    }
+    //         &:hover{
+    //             text-decoration: none;
+    //             background: white;
+    //         }
+    //     }
+    //     textarea{
+    //         background: none;
+    //         width: 100%;
+    //         border: none;
+    //         margin-top: 20px;
+    //         border-bottom: 1px solid lighten(@txt,30%);
+    //     }
+    // }
 }
 
 .hide-msg{
@@ -1769,6 +1769,27 @@ a.text-white:hover, a.text-white:visited:hover {
   text-decoration: none;
 }
 
+.bg-white { background-color: white }
+
+.text-head {
+  font-family: @font2;
+  font-size: 21pt;
+  font-weight: bold;
+  color: @head;
+}
+
+.orangeline {
+  height: 2px;
+  width: 100px;
+  margin: 2em auto;
+  background: #e45e43;
+}
+
+label.control-label {
+  font-family: @font2;
+}
+
+
 
 /*=========================================================================
 Layout Helpers
@@ -1776,7 +1797,10 @@ Layout Helpers
 
 .font-large { font-size: 2em }
 
+.m-bottom-80 { margin-bottom: 80px }
+.m-top-80 { margin-top: 80px }
 .margin-auto { margin: auto }
+
 .p-right-100 { padding-right: 100px }
 .p-top-40 { padding-top: 40px }
 

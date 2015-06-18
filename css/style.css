@@ -1410,31 +1410,6 @@ CONTACT FORM
   line-height: 24px;
   font-size: 11pt;
 }
-.contact-form form input {
-  height: 40px;
-  border: none;
-  border-bottom: 1px solid #d6d6d6;
-  margin-top: 20px;
-  background: none;
-  width: 100%;
-}
-.contact-form form .contact-btn {
-  color: #ababab;
-  font-family: roboto;
-  border-radius: 3px;
-  background: #f7f7f7;
-}
-.contact-form form .contact-btn:hover {
-  text-decoration: none;
-  background: white;
-}
-.contact-form form textarea {
-  background: none;
-  width: 100%;
-  border: none;
-  margin-top: 20px;
-  border-bottom: 1px solid #d6d6d6;
-}
 .hide-msg {
   transform: translateY(-100%);
 }
@@ -1606,11 +1581,35 @@ a.text-white:visited:hover {
   color: #ccc;
   text-decoration: none;
 }
+.bg-white {
+  background-color: white;
+}
+.text-head {
+  font-family: roboto;
+  font-size: 21pt;
+  font-weight: bold;
+  color: #535353;
+}
+.orangeline {
+  height: 2px;
+  width: 100px;
+  margin: 2em auto;
+  background: #e45e43;
+}
+label.control-label {
+  font-family: roboto;
+}
 /*=========================================================================
 Layout Helpers
 ===========================================================================*/
 .font-large {
   font-size: 2em;
+}
+.m-bottom-80 {
+  margin-bottom: 80px;
+}
+.m-top-80 {
+  margin-top: 80px;
 }
 .margin-auto {
   margin: auto;
