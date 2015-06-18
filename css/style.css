@@ -1527,7 +1527,7 @@ MEDIA QWERY
   color: #908a8a;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   position: relative;
-  left: 21px;
+  left: -6px;
   top: 300px;
   width: 48px;
   height: 48px;
@@ -1537,4 +1537,67 @@ MEDIA QWERY
 #next2 i:hover,
 #prev2 i:hover {
   opacity: 1!important;
+}
+/*=========================================================================
+NAME/EMAIL NEWSLETTER
+===========================================================================*/
+.email-newsletter {
+  width: 250px;
+  float: left;
+  border-radius: 0 0 0 0;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  background-color: #f7f7f7;
+  color: #c2c5c7;
+  font-style: italic;
+  font-size: 14px;
+  border: 1px solid #E4DBDB;
+}
+.email-newsletter.firstname {
+  width: 150px;
+}
+.email-newsletter:first-child {
+  border-radius: 4px 0 0 4px;
+}
+input.email-newsletter:focus {
+  box-shadow: none!important;
+  border: 1px solid #f3f0f0!important;
+}
+.button-newsletter {
+  float: left;
+  width: 70px;
+  height: 40px;
+  background: url("../img/submit.png") no-repeat;
+  background-position: 25px 12px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.butt1 a,
+ul.navi li.spec a.down,
+.barr,
+.button-newsletter,
+.p2-icon,
+.p2 a,
+.slide-txt a:hover,
+.wrap input.submit-contact {
+  background-color: #787171;
+}
+.button-newsletter,
+.wrap input.submit-contact,
+.butt1 a {
+  border: 1px solid #787171;
+}
+/*=========================================================================
+Layout Helpers
+===========================================================================*/
+.margin-auto {
+  margin: auto;
+}
+.w-470 {
+  width: 470px;
 }
