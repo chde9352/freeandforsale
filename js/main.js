@@ -7,7 +7,7 @@
     $(window).load(function() {
       $(".loading").fadeOut("slow");
     });
-
+/*
     //Stellar
     $(window).stellar({
       horizontalScrolling:false
@@ -23,7 +23,7 @@
       }
 
     } catch(err) {}    
-
+*/
 
     //Nav dropdown
     $(".nav-drop-content").hide();
