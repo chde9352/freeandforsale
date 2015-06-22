@@ -1596,12 +1596,21 @@ a.text-white:visited:hover {
 .bg-white {
   background-color: white;
 }
+.text-faded { opacity: 0.7 }
+
 .text-head {
   font-family: roboto;
   font-size: 21pt;
   font-weight: bold;
   color: #535353;
 }
+
+.text-justify { text-align: justify }
+
+.text-quote {
+	font-style: italic;
+}
+
 .orangeline {
   height: 2px;
   width: 100px;
@@ -1617,9 +1626,12 @@ Layout Helpers
 .font-large {
   font-size: 2em;
 }
+.m-bottom { margin-bottom: 1em }
+.m-bottom-25 { margin-bottom: 25px }
 .m-bottom-80 {
   margin-bottom: 80px;
 }
+.m-top-n35 { margin-top: -35px }
 .m-top-80 {
   margin-top: 80px;
 }
