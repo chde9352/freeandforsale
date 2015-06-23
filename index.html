@@ -3,6 +3,7 @@
 
 <html>
 <head>
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <meta charset="utf-8">
 
 <!--Meta Mobile-->
@@ -139,28 +140,57 @@ Main Message
         </div>
         
         <div class="banner-txt">
-            <p>Only with the FREE &amp; FOR SALE Mobile App<br> <br> <b>SIGN UP</b> and Get Early Access to our VIP Beta Launch</p>
+            <p>Only with the FREE &amp; FOR SALE Mobile App</p>
         </div>
-        
-        <!-- <a href="#code13" class="banner-btn">LEARN MORE</a> -->
 
-        <div class="banner-txt">
-          <form action="#" method="post" novalidate>
+        <div id="beta_signup" class="banner-txt">
+            <p><b>SIGN UP</b> and Get Early Access to our VIP Beta Launch</p>
+            <br />
+          <form id="beta_form" action="http://www.app-innovations.com/FFSAPI/api/Users/AddBetaUser" method="post">
             <div class='margin-auto w-470 clearfix'>
-              <input  placeholder="Enter first name" name="FIRSTNAME" class="email-newsletter firstname" >
-              <input  placeholder="Enter email address" name="EMAIL" class="email-newsletter" >
+              <input  placeholder="Enter first name" id="FirstName" name="FirstName" class="email-newsletter firstname" >
+              <input  placeholder="Enter email address" id="EmailAddress" name="EmailAddress" class="email-newsletter" >
 
-              <input type="submit"
-                value=""
-                name="subscribe"
-                class="button-newsletter">
-
+              <input type="submit" value="" name="subscribe" class="button-newsletter">
             </div>
           </form>
         </div>
+        <div id="beta_complete" class="banner-txt">
+            <br /><p>Thank you for signing up for VIP Beta Launch!</p>
+        </div>        
     </div>
 </div> 
 
+<script type='text/javascript'>
+    function validateEmail($email) {
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        return emailReg.test($email);
+    }
+    $("#beta_complete").hide();
+    $("#beta_form").submit(function (event) {
+        event.preventDefault();
+
+        var fname = $('#FirstName').val();
+        var email = $('#EmailAddress').val();
+        if ((email == '') || (!validateEmail(email))) {
+            alert("Please enter a valid email address");
+            return;
+        }
+
+        /* get some values from elements on the page: */
+        var $form = $(this),
+        url = $form.attr('action');
+
+        /* Send the data using post */
+        var posting = $.post(url, { FirstName: fname, EmailAddress: email });
+
+        /* Alerts the results */
+        posting.complete(function (data) {
+            $("#beta_signup").hide();
+            $("#beta_complete").hide().fadeIn(1500, function () { });
+        });
+    });
+</script>
 
 <!--==================================================================================
 Take A Peek
