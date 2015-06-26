@@ -161,6 +161,8 @@ LOGO
   position: absolute;
   padding: 40px;
 }
+
+@media (max-width: 433px){ .logo img { width: 100% } }
 /*=========================================================================
 NAVIGATION
 ===========================================================================*/
@@ -1649,9 +1651,11 @@ Layout Helpers
 .margin-auto {
   margin: auto;
 }
+.p-left-10 { padding-left: 10px }
 .p-right-100 {
   padding-right: 100px;
 }
+.p-top-10 { padding-top: 10px }
 .p-top-40 {
   padding-top: 40px;
 }
