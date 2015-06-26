@@ -255,10 +255,15 @@ NAVIGATION
   background-size: cover;
   height: 700px;
 }
+
+@media (max-width: 768px){ .banner-lg { height: 750px } }
+@media (max-width: 645px){ .banner-lg { height: 815px } }
+
 .banner-lg .banner-content {
   height: 100%;
   text-align: center;
 }
+
 .banner-lg .banner-content .line {
   margin: auto;
   width: 1px;
