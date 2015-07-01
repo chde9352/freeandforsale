@@ -260,6 +260,7 @@ NAVIGATION
 
 @media (max-width: 768px){ .banner-lg { height: 750px } }
 @media (max-width: 645px){ .banner-lg { height: 815px } }
+@media (max-width: 375px){ .banner-lg { height: 900px } }
 
 .banner-lg .banner-content {
   height: 100%;
