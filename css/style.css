@@ -1497,6 +1497,15 @@ MEDIA QWERY
   margin: 80px auto 0;
   position: relative;
 }
+
+@media (max-width: 340px){
+  #slider2.visible-xs {
+    margin-left: -30px;
+    width: 316px;
+  }
+}
+
+
 #slider2 img {
   width: 247px;
   height: 433px;
@@ -1504,6 +1513,7 @@ MEDIA QWERY
   top: 60px;
   left: 50px;
 }
+
 #prev2 {
   font-size: 48px;
   color: #908a8a;
